@@ -1,0 +1,38 @@
+[
+  {
+    "id": "bow-water-10s-v1",
+    "title": "船艏破水 · AI 环境音",
+    "kind": "water",
+    "source": "ElevenLabs · eleven_text_to_sound_v2",
+    "prompt": "Close perspective of the bow of a historical wooden sailing ship steadily cutting through calm seawater. Continuous gentle rushing water with small waves softly lapping the wooden hull, natural detailed sea texture, stable loudness. Only water: no music, no voices, no engine, no birds, no storm, no impacts. Seamless looping sailing ambience.",
+    "status": "待试听",
+    "note": "目标 10 秒；已启用循环生成，衔接效果待试听。",
+    "date": "2026-10-07",
+    "license": "通过用户账户生成；使用范围以账户套餐与 ElevenLabs 条款为准",
+    "url": "/audio/elevenlabs/bow-water-10s.mp3"
+  },
+  {
+    "id": "suno-voyage-a",
+    "title": "海图上的远航 · A",
+    "kind": "bgm",
+    "source": "Suno · v6-mini",
+    "prompt": "Instrumental nautical exploration BGM, gentle lilting 6/8 at 72 BPM. Warm legato strings, expressive flute and oboe, delicate harp, soft acoustic guitar. Peaceful wonder, spacious horizon, buoyant wave-like phrasing. No vocals.",
+    "status": "候选",
+    "note": "悠扬的航海地图 BGM · 3:10",
+    "date": "2026-10-07",
+    "license": "通过用户 Suno 免费账户生成，许可范围以生成时的套餐与条款为准",
+    "url": "/audio/suno/voyage-a.mp3"
+  },
+  {
+    "id": "suno-voyage-b",
+    "title": "海图上的远航 · B",
+    "kind": "bgm",
+    "source": "Suno · v6-mini",
+    "prompt": "Instrumental nautical exploration BGM, gentle lilting 6/8 at 72 BPM. Warm legato strings, expressive flute and oboe, delicate harp, soft acoustic guitar. Peaceful wonder, spacious horizon, buoyant wave-like phrasing. No vocals.",
+    "status": "候选",
+    "note": "悠扬的航海地图 BGM · 3:40",
+    "date": "2026-10-07",
+    "license": "通过用户 Suno 免费账户生成，许可范围以生成时的套餐与条款为准",
+    "url": "/audio/suno/voyage-b.mp3"
+  }
+]

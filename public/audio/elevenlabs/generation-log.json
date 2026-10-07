@@ -1,0 +1,48 @@
+{
+  "attempts": [
+    {
+      "id": "voyage-bgm-30s-v1",
+      "title": "向远方 · AI 航海 BGM",
+      "kind": "bgm",
+      "model": "music_v1",
+      "prompt": "Instrumental background music for an antique hand-painted nautical world map. A historical wooden merchant sailing ship travelling across a calm open ocean. Peaceful, spacious, warm, a restrained sense of exploration and anticipation. Gentle orchestral strings, soft woodwinds and light plucked strings, slow steady pulse, understated melody, stable dynamics. No vocals, no speech, no ocean or ship sound effects, no dramatic climax. A coherent 30-second game background cue.",
+      "request": {
+        "prompt": "Instrumental background music for an antique hand-painted nautical world map. A historical wooden merchant sailing ship travelling across a calm open ocean. Peaceful, spacious, warm, a restrained sense of exploration and anticipation. Gentle orchestral strings, soft woodwinds and light plucked strings, slow steady pulse, understated melody, stable dynamics. No vocals, no speech, no ocean or ship sound effects, no dramatic climax. A coherent 30-second game background cue.",
+        "music_length_ms": 30000,
+        "model_id": "music_v1",
+        "force_instrumental": true
+      },
+      "date": "2026-10-07T09:51:06.217Z",
+      "status": "failed",
+      "httpStatus": 402,
+      "requestId": null,
+      "error": {
+        "type": "payment_required",
+        "code": "paid_plan_required",
+        "message": "Music API is not available for free users. Please upgrade to a paid plan to use the API.",
+        "status": "limited_access",
+        "request_id": "c72c27b1b80b59c9ff2662b58240036d"
+      }
+    },
+    {
+      "id": "bow-water-10s-v1",
+      "title": "船艏破水 · AI 环境音",
+      "kind": "water",
+      "model": "eleven_text_to_sound_v2",
+      "prompt": "Close perspective of the bow of a historical wooden sailing ship steadily cutting through calm seawater. Continuous gentle rushing water with small waves softly lapping the wooden hull, natural detailed sea texture, stable loudness. Only water: no music, no voices, no engine, no birds, no storm, no impacts. Seamless looping sailing ambience.",
+      "request": {
+        "text": "Close perspective of the bow of a historical wooden sailing ship steadily cutting through calm seawater. Continuous gentle rushing water with small waves softly lapping the wooden hull, natural detailed sea texture, stable loudness. Only water: no music, no voices, no engine, no birds, no storm, no impacts. Seamless looping sailing ambience.",
+        "duration_seconds": 10,
+        "model_id": "eleven_text_to_sound_v2",
+        "loop": true,
+        "prompt_influence": 0.3
+      },
+      "date": "2026-10-07T09:51:07.740Z",
+      "status": "complete",
+      "httpStatus": 200,
+      "requestId": null,
+      "file": "bow-water-10s.mp3",
+      "bytes": 160958
+    }
+  ]
+}

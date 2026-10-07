@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.DS_Store
+
+*.tsbuildinfo
+
+.env
+.env.*
+!.env.example
+
+# Local UI verification screenshots
+screenshots/
