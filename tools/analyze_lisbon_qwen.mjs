@@ -1,0 +1,13 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {existsSync} from 'node:fs';
+import {loadEnvFile} from 'node:process';
+loadEnvFile('.env.local');
+const key=process.env.DASHSCOPE_API_KEY;if(!key)throw new Error('Missing DASHSCOPE_API_KEY');
+const log='analysis/lisbon-qwen-attempt.json';if(existsSync(log))throw new Error('Attempt already recorded. No automatic retries.');
+const audio=await readFile('/Users/eric/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/wxid_dq9sd21xw2kd22_6f31/msg/file/2026-10/岩崎琢 - Lisbon.mp3');
+const prompt='仅根据所附音频分析，不根据文件名猜测。用中文描述曲风、情绪、主奏与伴奏乐器（注明确定程度及可能替代）、听感节奏与拍号（估计，不声称实测BPM）、约93秒内带时间点的编曲变化及动态。区别听到的证据与联想。不抄写旋律或歌词。最后提供900字符以内英文Suno提示词，创作原创历史里斯本港口城市纯器乐BGM，只参考宽泛的乐器、节奏、氛围，不复刻旋律；无人声、无环境音效、无史诗高潮。说明它与悠扬的海上航行曲有什么区别。';
+await mkdir('analysis',{recursive:true});await writeFile(log,JSON.stringify({status:'started',model:'qwen3.8-omni-flash',requests:1},null,2));
+try{const response=await fetch((process.env.DASHSCOPE_BASE_URL||'https://dashscope.aliyuncs.com/compatible-mode/v1').replace(/\/$/,'')+'/chat/completions',{method:'POST',headers:{Authorization:'Bearer '+key,'Content-Type':'application/json'},body:JSON.stringify({model:'qwen3.8-omni-flash',messages:[{role:'user',content:[{type:'input_audio',input_audio:{data:'data:;base64,'+audio.toString('base64'),format:'mp3'}},{type:'text',text:prompt}]}],modalities:['text'],stream:true,stream_options:{include_usage:true},max_tokens:4000}),signal:AbortSignal.timeout(120000)});
+ if(!response.ok){const error=await response.text();await writeFile(log,JSON.stringify({status:'failed',httpStatus:response.status,error,requests:1},null,2));console.log('HTTP '+response.status+' '+error);process.exitCode=1;}
+ else{let pending='',answer='',usage;const reader=response.body.getReader(),decoder=new TextDecoder();while(true){const {done,value}=await reader.read();if(done)break;pending+=decoder.decode(value,{stream:true});const lines=pending.split('\n');pending=lines.pop()||'';for(const line of lines){if(!line.startsWith('data: '))continue;const raw=line.slice(6).trim();if(raw==='[DONE]')continue;const chunk=JSON.parse(raw);if(chunk.error)throw new Error(JSON.stringify(chunk.error));answer+=chunk.choices?.[0]?.delta?.content||'';if(chunk.usage)usage=chunk.usage;}}await writeFile('analysis/lisbon-qwen.md',answer);await writeFile(log,JSON.stringify({status:answer?'completed':'empty',httpStatus:200,model:'qwen3.8-omni-flash',requests:1,usage},null,2));console.log(answer||'No analysis returned');}
+}catch(e){await writeFile(log,JSON.stringify({status:'failed',error:e.message,requests:1},null,2));console.log('Request failed: '+e.message);process.exitCode=1;}

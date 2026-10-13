@@ -34,5 +34,74 @@
     "date": "2026-10-07",
     "license": "通过用户 Suno 免费账户生成，许可范围以生成时的套餐与条款为准",
     "url": "/audio/suno/voyage-b.mp3"
+  },
+  {
+    "id": "suno-lisbon",
+    "title": "Lisbon",
+    "kind": "bgm",
+    "source": "Suno · 用户提供",
+    "prompt": "",
+    "status": "已入库",
+    "note": "里斯本城市 BGM；原始文件名 Luz de Marea.mp3。",
+    "date": "2026-10-08",
+    "license": "用户提供的 Suno 作品；使用范围以生成时的账户套餐与条款为准",
+    "url": "/audio/suno/lisbon.mp3",
+    "themes": [
+      "voyage"
+    ],
+    "styles": [
+      "原声",
+      "民谣"
+    ],
+    "moods": [
+      "温暖",
+      "怀旧"
+    ],
+    "duration": 174.84
+  },
+  {
+    "id": "market-30s-v1",
+    "title": "港口集市 · AI 环境音",
+    "kind": "market",
+    "source": "ElevenLabs · eleven_text_to_sound_v2",
+    "prompt": "Lively medieval European port market ambience. Layered crowd chatter, vendors calling and bargaining indistinctly. Nearby, a merchant counts metal coins: small clear clinks as coins touch and land on a wooden counter. Footsteps on cobblestones, baskets and wooden stalls rustling. Busy but friendly, natural outdoor acoustics, steady ambience for looping. No music, engines, traffic, cash registers or modern devices.",
+    "status": "待试听",
+    "note": "中世纪港口集市：人群、吆喝与交易金币声。目标30秒，已开启循环生成；实际细节与衔接待试听。",
+    "date": "2026-10-08",
+    "license": "通过用户账户生成；使用范围以账户套餐与 ElevenLabs 条款为准",
+    "url": "/audio/elevenlabs/market-30s.mp3",
+    "duration": 30,
+    "themes": [
+      "voyage"
+    ],
+    "styles": [
+      "环境音"
+    ],
+    "moods": [
+      "热闹"
+    ]
+  },
+  {
+    "id": "fishing-rowing-20s-v1",
+    "title": "渔船划桨 · AI 环境音",
+    "kind": "water",
+    "source": "ElevenLabs · eleven_text_to_sound_v2",
+    "prompt": "Close perspective aboard a small traditional wooden fishing boat propelled by hand rowing on calm water. Steady unhurried repeating oar strokes: wooden oars dip, pull through water with soft swishes and small splashes, lift with brief drips. Subtle wooden rowlock creaks, faint hull water movement. Consistent natural rhythm and loudness, seamless gameplay movement loop, no intro or outro. No engine, voices, music, wind, birds or large waves.",
+    "status": "待试听",
+    "note": "传统木制渔船人工划桨移动声。目标20秒，开启循环生成。游戏建议：移动时循环，停止时约150–250毫秒淡出并停止；循环衔接待试听。",
+    "date": "2026-10-09",
+    "license": "通过用户账户生成；使用范围以账户套餐与 ElevenLabs 条款为准",
+    "url": "/audio/elevenlabs/fishing-rowing-20s.mp3",
+    "duration": 20,
+    "themes": [
+      "voyage"
+    ],
+    "styles": [
+      "环境音"
+    ],
+    "moods": [
+      "自然",
+      "平静"
+    ]
   }
 ]

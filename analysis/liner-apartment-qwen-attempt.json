@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "httpStatus": 200,
+  "model": "qwen3.8-omni-flash",
+  "requests": 1,
+  "usage": {
+    "completion_tokens": 6162,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4303,
+      "text_tokens": 1859
+    },
+    "prompt_tokens": 1441,
+    "prompt_tokens_details": {
+      "audio_tokens": 1234,
+      "cached_tokens": 0,
+      "text_tokens": 207
+    },
+    "total_tokens": 7603
+  }
+}

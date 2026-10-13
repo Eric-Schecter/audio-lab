@@ -43,6 +43,46 @@
       "requestId": null,
       "file": "bow-water-10s.mp3",
       "bytes": 160958
+    },
+    {
+      "id": "market-30s-v1",
+      "title": "港口集市 · AI 环境音",
+      "kind": "market",
+      "model": "eleven_text_to_sound_v2",
+      "prompt": "Lively medieval European port market ambience. Layered crowd chatter, vendors calling and bargaining indistinctly. Nearby, a merchant counts metal coins: small clear clinks as coins touch and land on a wooden counter. Footsteps on cobblestones, baskets and wooden stalls rustling. Busy but friendly, natural outdoor acoustics, steady ambience for looping. No music, engines, traffic, cash registers or modern devices.",
+      "request": {
+        "text": "Lively medieval European port market ambience. Layered crowd chatter, vendors calling and bargaining indistinctly. Nearby, a merchant counts metal coins: small clear clinks as coins touch and land on a wooden counter. Footsteps on cobblestones, baskets and wooden stalls rustling. Busy but friendly, natural outdoor acoustics, steady ambience for looping. No music, engines, traffic, cash registers or modern devices.",
+        "duration_seconds": 30,
+        "model_id": "eleven_text_to_sound_v2",
+        "loop": true,
+        "prompt_influence": 0.4
+      },
+      "date": "2026-10-08T07:57:30.286Z",
+      "status": "complete",
+      "httpStatus": 200,
+      "requestId": null,
+      "file": "market-30s.mp3",
+      "bytes": 481115
+    },
+    {
+      "id": "fishing-rowing-20s-v1",
+      "title": "渔船划桨 · AI 环境音",
+      "kind": "water",
+      "model": "eleven_text_to_sound_v2",
+      "prompt": "Close perspective aboard a small traditional wooden fishing boat propelled by hand rowing on calm water. Steady unhurried repeating oar strokes: wooden oars dip, pull through water with soft swishes and small splashes, lift with brief drips. Subtle wooden rowlock creaks, faint hull water movement. Consistent natural rhythm and loudness, seamless gameplay movement loop, no intro or outro. No engine, voices, music, wind, birds or large waves.",
+      "request": {
+        "text": "Close perspective aboard a small traditional wooden fishing boat propelled by hand rowing on calm water. Steady unhurried repeating oar strokes: wooden oars dip, pull through water with soft swishes and small splashes, lift with brief drips. Subtle wooden rowlock creaks, faint hull water movement. Consistent natural rhythm and loudness, seamless gameplay movement loop, no intro or outro. No engine, voices, music, wind, birds or large waves.",
+        "duration_seconds": 20,
+        "model_id": "eleven_text_to_sound_v2",
+        "loop": true,
+        "prompt_influence": 0.4
+      },
+      "date": "2026-10-09T03:56:37.085Z",
+      "status": "complete",
+      "httpStatus": 200,
+      "requestId": null,
+      "file": "fishing-rowing-20s.mp3",
+      "bytes": 321036
     }
   ]
 }
