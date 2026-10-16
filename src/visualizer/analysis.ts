@@ -1,4 +1,4 @@
-export type VisualEvent={n:number;at:number;power:number};
+export type VisualEvent={n:number;at:number;power:number;duration:number};
 const cache=new Map<string,Promise<VisualEvent[]>>();
 export function prepareVisuals(url:string){
  const found=cache.get(url);if(found)return found;

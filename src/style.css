@@ -5,3 +5,65 @@
 .library-switch{display:flex;gap:4px;background:#071b1d80;border:1px solid #d4ba8530;border-radius:8px;padding:4px;margin-top:32px}.library-switch a{display:flex;flex:1;align-items:center;justify-content:center;gap:7px;padding:10px 6px;border-radius:5px;font-size:12px;color:#b9ad95}.library-switch a.active{background:#d0b17c25;color:#f1d6a8}.library-switch+.nav-label{margin-top:30px}
 
 .search-filters select{appearance:none;padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23c9baa0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:14px 14px}
+
+.album-cover{width:270px;aspect-ratio:1;object-fit:cover;border-radius:10px;border:1px solid #cfb68955;box-shadow:0 15px 45px #07141666}.album-hero{gap:40px}@media(max-width:700px){.album-cover{width:170px}.album-hero{gap:22px;flex-wrap:wrap}.album-hero h1{font-size:36px}}
+
+/* Album palette: dusk over the sea. Asset URLs are rebased by Vite. */
+body[data-album="chaoyin"]{color:#e7edf7;background:linear-gradient(110deg,rgba(13,26,48,.78),rgba(29,37,66,.57)),url('/images/chaoyin-cover.png') center 48%/cover fixed no-repeat}
+body[data-album="chaoyin"] aside{background:#101c34d9;border-color:#a9bdd32e}
+body[data-album="chaoyin"] .brand svg,body[data-album="chaoyin"] .dot{color:#f2bd8e}
+body[data-album="chaoyin"] .brand span,body[data-album="chaoyin"] .nav-label,body[data-album="chaoyin"] .sidebar-bottom{color:#a7b5d0}
+body[data-album="chaoyin"] .nav-item{color:#c5d2e9}
+body[data-album="chaoyin"] .active{color:#f8d1ae;background:#d2a4c624}
+body[data-album="chaoyin"] .dot{background:#f2bd8e}
+body[data-album="chaoyin"] .eyebrow,body[data-album="chaoyin"] .meta,body[data-album="chaoyin"] .section-head span{color:#bdcce0}
+body[data-album="chaoyin"] .primary{background:#f1bd96;color:#24334b;box-shadow:0 4px 24px #eea38322}
+body[data-album="chaoyin"] .primary:hover{background:#ffdbba}
+body[data-album="chaoyin"] .search-filters input,body[data-album="chaoyin"] .search-filters select,body[data-album="chaoyin"] .edit-label input{background:#172a46d9;border-color:#9db9d44a;color:#e2eaf6}
+body[data-album="chaoyin"] .search-filters input::placeholder{color:#a8bad2}
+body[data-album="chaoyin"] .tracks{background:#142641bd;border-color:#a9bdd333;box-shadow:0 12px 40px #08132644}
+body[data-album="chaoyin"] .table-head{color:#b7c8df;border-color:#a9bdd333}
+body[data-album="chaoyin"] article{border-color:#a9bdd322}
+body[data-album="chaoyin"] article.selected{background:#b7a4d52e}
+body[data-album="chaoyin"] article:hover{background:#b7a4d51a}
+body[data-album="chaoyin"] .track-name small,body[data-album="chaoyin"] .tag,body[data-album="chaoyin"] .track-duration,body[data-album="chaoyin"] .track-play{color:#b1c3da}
+body[data-album="chaoyin"] .selected .track-name strong,body[data-album="chaoyin"] .selected .track-play{color:#ffd4ac}
+body[data-album="chaoyin"] .player{background:#101f39ed;border-color:#aec1d63b;box-shadow:0 -8px 30px #07112755}
+body[data-album="chaoyin"] .mini-cover{background:linear-gradient(#17274622,#17274644),url('/images/chaoyin-cover.png') center/cover;color:#f6d5af}
+body[data-album="chaoyin"] .now small,body[data-album="chaoyin"] .progress span,body[data-album="chaoyin"] .volume{color:#b4c3db}
+body[data-album="chaoyin"] .controls button{color:#d3dff1}
+body[data-album="chaoyin"] .controls .play{background:#f1bf9c;color:#23344c}
+body[data-album="chaoyin"] .controls .on{color:#f1bf9c}
+body[data-album="chaoyin"] input[type=range]{accent-color:#efbd9a}
+body[data-album="chaoyin"] .music-visualizer{background:#12264155;border-color:#adc0db44}
+body[data-album="chaoyin"] .dialog{background:#162943f5;border-color:#a9bdd344}
+body[data-album="chaoyin"] .dialog p{color:#c5d2e5}
+body[data-album="chaoyin"] .dialog h3{color:#f1c7a5}
+body[data-album="chaoyin"] .mobile-nav{color:#e0c7e3}
+body{transition:color .45s ease}aside,.player,.tracks,.music-visualizer{transition:background-color .45s ease,border-color .45s ease}
+
+/* The visualization belongs to the playing track, independently of the page album. */
+.player-expanded{height:310px;grid-template-rows:190px 76px;gap:10px 30px;padding:12px 30px 16px}
+.player-visual{grid-column:1/-1;min-width:0;height:190px}
+.player-visual[hidden]{display:none}
+.player-visual .music-visualizer{height:100%;margin:0;border:0;border-radius:8px;backdrop-filter:none}
+.has-player-visual main{padding-bottom:340px}
+.has-player-visual aside{bottom:310px}
+body .player[data-playing-album="voyage"]{background:#102326f5;border-color:#cdb38a40;color:#eadbc0}
+body .player[data-playing-album="voyage"] .music-visualizer{background:#10232666;border-color:#c9b28a44}
+body .player[data-playing-album="voyage"] .mini-cover{background:linear-gradient(#132b2b55,#132b2b55),url('/images/chart-candle.png') center/cover;color:#f0d7a6}
+body .player[data-playing-album="voyage"] .now small,body .player[data-playing-album="voyage"] .progress span,body .player[data-playing-album="voyage"] .volume{color:#b7aa8e}
+body .player[data-playing-album="voyage"] .controls button{color:#d1c4a9}
+body .player[data-playing-album="voyage"] .controls .play{background:#ead0a0;color:#1b3031}
+body .player[data-playing-album="voyage"] .controls .on{color:#efc987}
+body .player[data-playing-album="voyage"] input[type=range]{accent-color:#e6c28b}
+body .player[data-playing-album="chaoyin"]{background:#101f39f5;border-color:#aec1d63b;color:#e7edf7}
+body .player[data-playing-album="chaoyin"] .music-visualizer{background:#14264166;border-color:#adc0db44}
+body .player[data-playing-album="chaoyin"] .mini-cover{background:linear-gradient(#17274622,#17274644),url('/images/chaoyin-cover.png') center/cover;color:#f6d5af}
+body .player[data-playing-album="chaoyin"] .now small,body .player[data-playing-album="chaoyin"] .progress span,body .player[data-playing-album="chaoyin"] .volume{color:#b4c3db}
+body .player[data-playing-album="chaoyin"] .controls button{color:#d3dff1}
+body .player[data-playing-album="chaoyin"] .controls .play{background:#f1bf9c;color:#23344c}
+body .player[data-playing-album="chaoyin"] .controls .on{color:#f1bf9c}
+body .player[data-playing-album="chaoyin"] input[type=range]{accent-color:#efbd9a}
+@media(max-width:700px){.player-expanded{height:310px;grid-template-rows:150px auto;gap:8px 13px;padding:8px 16px 14px}.player-visual{height:150px}.has-player-visual main{padding-bottom:335px}.player-expanded .transport{grid-row:3;grid-column:1/-1}.player-expanded .now{grid-row:2}.player-expanded .right-player{grid-row:2}}
+

@@ -103,5 +103,23 @@
       "自然",
       "平静"
     ]
+  },
+  {
+    "id": "buant-groove",
+    "title": "Buant Groove",
+    "kind": "bgm",
+    "source": "用户提供",
+    "prompt": "",
+    "status": "已入库",
+    "note": "原始文件名 Buant Groove.mp3。",
+    "date": "2026-10-16",
+    "license": "用户提供；来源及许可待确认",
+    "url": "/audio/suno/buant-groove.mp3",
+    "duration": 120.048,
+    "themes": [
+      "chaoyin"
+    ],
+    "styles": [],
+    "moods": []
   }
 ]
